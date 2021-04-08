@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Webpage</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <div class="nav-bar">
+    <div class="nav-bar" id="res-bar">
         <div class="logo">Snapshot</div>
         <ul class="nav-links">
             <li><a href="#">Home</a></li>
@@ -16,6 +17,9 @@
             <li><a href="#">Gallery</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
+        <a href="javascript:void(0);" class="icon" onclick="mobileWeb()">
+          <i class="fa fa-bars"></i>
+        </a>
     </div>
 
     <!-- Hero section -->
@@ -103,5 +107,17 @@
         </div>
         <h6>Copyright &copy; 2021 Zuri Training.</h6>
     </div>
+    
+    <!--Javascript code for Harmburger icon responsiveness-->
+    <script>
+      function mobileWeb() {
+        var x = document.getElementById("res-bar");
+        if (x.className === "nav-bar") {
+          x.className += " mobres";
+        } else {
+          x.className = "nav-bar";
+        }
+      }
+    </script>
 </body>
 </html>
